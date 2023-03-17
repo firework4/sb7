@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sb7.mapper.BssMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.sb7.entity.Bss">
+            <id property="colId" column="col_id" jdbcType="INTEGER"/>
+            <result property="colName" column="col_name" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        col_id,col_name
+    </sql>
+</mapper>

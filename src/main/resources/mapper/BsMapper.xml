@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sb7.mapper.BsMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.sb7.entity.Bs">
+            <id property="stuId" column="Stu_id" jdbcType="INTEGER"/>
+            <result property="stuName" column="Stu_name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        Stu_id,Stu_name
+    </sql>
+    <select id="findById" parameterType="int" resultType="com.example.sb7.entity.Bs">
+    select * from user
+    <where>
+            id=#{id}
+    </where>;
+    </select>
+</mapper>
